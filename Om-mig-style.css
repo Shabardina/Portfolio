@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-image: url("https://images.pexels.com/photos/3527795/pexels-photo-3527795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+header,
+footer {
+    background-color:#5d5cbd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navbar,
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem; 
+}
+
+.nav-links,
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a, 
+.footer-links a {
+    text-decoration: none;
+    color: #e79ddd; 
+}
+
+main {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem;
+    margin-top: 2rem;
+}
+
+.about-header {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #d181c6;
+    text-align: center; 
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.about-header img {
+    max-width: 35%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 10px;
+    justify-content: center;
+}
+
+.cv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.description-paragraf {
+    flex: 1 1 200px;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 8px;
+    background-color: rgb(94, 155, 132);
+}
+
+.description-header {
+    text-align: center;
+}
+
+.description-items-list {
+    text-align: left;
+    list-style-position: outside;  
+}
+
+.description-items-textbox {
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 0;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 780px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    main {
+        display: flex;
+        gap: 2rem;
+        margin: 2rem; 
+    }
+
+    .about-header {
+        text-align: center;
+    }
+    
+    .cv {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem; 
+    }
+
+    .description-paragraf {
+        flex: 1 1 200px;
+    }
+
+    .description-items-list {
+        padding-left: 0;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
