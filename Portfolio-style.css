@@ -27,8 +27,16 @@ footer {
 .navbar,
 footer {
      display: flex;
-     flex-direction: column;
+     justify-content: space-between;
      align-items: center;
+}
+
+.navbar { 
+     flex-direction: row;
+}
+
+footer {
+     flex-direction: row-reverse;
 }
 
 .nav-link-container {
@@ -97,7 +105,7 @@ footer {
  }
 
 /* MOBILE STYLES */
-@media (min-width: 768px) {
+@media (max-width: 770px) {
      .navbar {
           flex-direction: row;
           justify-content: space-between;
@@ -136,8 +144,7 @@ footer {
 
      footer {
           display: flex;
-          justify-content: space-between;
-          flex-direction: row;
+          flex-direction: column;
      }
 
      .contact-container {
