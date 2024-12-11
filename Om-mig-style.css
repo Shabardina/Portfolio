@@ -27,16 +27,9 @@ footer {
 .navbar,
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.navbar {
-    flex-direction: row;
-}
-
-footer {
-    flex-direction: row-reverse;
 }
 
 .nav-link-container {
@@ -46,7 +39,9 @@ footer {
 
 .nav-links {
     display: flex;
-    gap: 1rem; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .nav-links,
@@ -64,7 +59,7 @@ footer {
 
 main {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin: 2rem;
     margin-top: 2rem;
 }
@@ -90,7 +85,7 @@ main {
 .cv {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem; 
     margin: 2rem;
 }
 
@@ -108,62 +103,42 @@ main {
     text-align: center;
 }
 
-.description-items-list {
-    text-align: left;
-    list-style-position: outside;  
-}
-
 .description-items-textbox {
     text-align: center;
 }
 
-.contact-header {
-    margin-bottom: 0;
+.description-items-list {
+    text-align: left;
+    list-style-position: outside;
+    padding-left: 0;
 }
 
-/* MOBILE STYLES */
-@media (max-width: 770px) {
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
+    
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-    }
-
-    .nav-link-container {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 1rem;
-    }
-
-    main {
-        display: flex;
-        gap: 2rem;
-        margin: 2rem; 
-    }
-
-    .about-header {
-        text-align: center;
     }
     
-    .cv {
+    .nav-links {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         gap: 1rem; 
     }
-
-    .description-paragraf {
-        flex: 1 1 200px;
-    }
-
-    .description-items-list {
-        padding-left: 0;
-    }
+    
+    .contact-header {
+        margin-bottom: 0;
+    }    
 
     footer {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
     }
 }

@@ -27,16 +27,9 @@ footer {
 .navbar,
 footer {
      display: flex;
+     flex-direction: column;
      justify-content: space-between;
      align-items: center;
-}
-
-.navbar { 
-     flex-direction: row;
-}
-
-footer {
-     flex-direction: row-reverse;
 }
 
 .nav-link-container {
@@ -46,6 +39,8 @@ footer {
 
 .nav-links {
      display: flex;
+     flex-direction: column;
+     align-items: center;
      gap: 1rem; 
 }
 
@@ -62,10 +57,10 @@ footer {
      color: #e79ddd;
 }
 
- main {
+main {
      display: flex;
      gap: 3rem;
-     margin: 2rem;
+     margin: 2rem; 
      margin-top: 2rem;
 }
 
@@ -76,13 +71,13 @@ footer {
      text-align: center; 
      border-radius: 8px;
      margin-bottom: 3rem;
-     text-align: left;
+     text-align: center;
 }
 
 .projekt-container {
      display: flex;
      flex-wrap: wrap;
-     gap: 1rem;
+     gap: 1rem; 
 }
 
 .projekt {
@@ -100,56 +95,32 @@ footer {
      border-radius: 8px;
 }
 
-.contact-header {
-     margin-bottom: 0;
- }
+.contact-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
 
-/* MOBILE STYLES */
-@media (max-width: 770px) {
+
+/* DESKTOP STYLES */
+@media (min-width: 768px) {
      .navbar {
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
      }
-
-     .nav-link-container {
-          display: flex;
-          align-items: center;
-     }
-
+     
      .nav-links {
           display: flex;
+          flex-direction: row;
           gap: 1rem;
      }
-
-     main {
-          display: flex;
-          gap: 2rem;
-          margin: 2rem; 
-     }
      
-     .about-header {
-          text-align: left;
-     }
+     .contact-header {
+          margin-bottom: 0;
+      }
 
-     .projekt-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 1rem; 
+      footer {
+          flex-direction: row-reverse;
      }
-
-     .projekt {
-          flex: 1 1 200px;
-     }
-
-     footer {
-          display: flex;
-          flex-direction: column;
-     }
-
-     .contact-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
-}
+} 
